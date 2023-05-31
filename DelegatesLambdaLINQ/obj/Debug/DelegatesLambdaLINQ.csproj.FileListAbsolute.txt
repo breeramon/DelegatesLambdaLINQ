@@ -1,0 +1,6 @@
+c:\users\brssantos\documents\visual studio 2013\Projects\DelegatesLambdaLINQ\DelegatesLambdaLINQ\bin\Debug\DelegatesLambdaLINQ.exe.config
+c:\users\brssantos\documents\visual studio 2013\Projects\DelegatesLambdaLINQ\DelegatesLambdaLINQ\bin\Debug\DelegatesLambdaLINQ.exe
+c:\users\brssantos\documents\visual studio 2013\Projects\DelegatesLambdaLINQ\DelegatesLambdaLINQ\bin\Debug\DelegatesLambdaLINQ.pdb
+c:\users\brssantos\documents\visual studio 2013\Projects\DelegatesLambdaLINQ\DelegatesLambdaLINQ\obj\Debug\DelegatesLambdaLINQ.csprojResolveAssemblyReference.cache
+c:\users\brssantos\documents\visual studio 2013\Projects\DelegatesLambdaLINQ\DelegatesLambdaLINQ\obj\Debug\DelegatesLambdaLINQ.exe
+c:\users\brssantos\documents\visual studio 2013\Projects\DelegatesLambdaLINQ\DelegatesLambdaLINQ\obj\Debug\DelegatesLambdaLINQ.pdb
