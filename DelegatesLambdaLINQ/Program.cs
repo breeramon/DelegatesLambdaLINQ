@@ -19,18 +19,21 @@ namespace DelegatesLambdaLINQ
             list.Add(new Product("Tablet", 350.50));
             list.Add(new Product("HD Case", 80.90));
 
-            //list.ForEach(p => { p.Price += p.Price * 0.1; }); --- Pode ser feito desse jeito ou no exemplo abaixo.
+            Func<Product, string> func = NameUpper;
 
-            list.ForEach(UpdatePrice);
-            foreach (Product p in list)
+            //List<string> result = list.Select(NameUpper).ToList(); --- TBM PODE SER FEITO DESSE JEITO
+            //List<string> result = list.Select(p => p.Nme.ToUpper()).ToList(); --- OUTRO MÉTODO QUE TBM PODE SER FEITO, que é colocando a expressão dentro do método select
+
+            List<string> result = list.Select(func).ToList();
+            foreach (string p in result)
             {
                 Console.WriteLine(p);
             }
         }
 
-        public static void UpdatePrice(Product p)
+        public static string NameUpper(Product p)
         {
-            p.Price += p.Price * 0.1;
+            return p.Name.ToUpper();
         }
     }
 }
