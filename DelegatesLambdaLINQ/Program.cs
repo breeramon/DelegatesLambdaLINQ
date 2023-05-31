@@ -19,24 +19,18 @@ namespace DelegatesLambdaLINQ
             list.Add(new Product("Tablet", 350.50));
             list.Add(new Product("HD Case", 80.90));
 
-            //Uso sem a expressão lambda no list.RemoveAll()
-            list.RemoveAll(ProductTest);
+            //list.ForEach(p => { p.Price += p.Price * 0.1; }); --- Pode ser feito desse jeito ou no exemplo abaixo.
+
+            list.ForEach(UpdatePrice);
             foreach (Product p in list)
             {
                 Console.WriteLine(p);
             }
-
-            //Uso com a expressão lambda no list.RemoveAll()
-            list.RemoveAll(p2 => p2.Price <= 100);
-            foreach (Product p2 in list)
-            {
-                Console.WriteLine(p2);
-            }
         }
 
-        public static bool ProductTest(Product p)
+        public static void UpdatePrice(Product p)
         {
-            return p.Price >= 100;
+            p.Price += p.Price * 0.1;
         }
     }
 }
