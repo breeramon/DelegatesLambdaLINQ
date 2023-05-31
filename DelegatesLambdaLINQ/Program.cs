@@ -13,27 +13,17 @@ namespace DelegatesLambdaLINQ
     {
         static void Main(string[] args)
         {
-            List<Product> list = new List<Product>();
-            list.Add(new Product("Tv", 900.00));
-            list.Add(new Product("Mouse", 50.00));
-            list.Add(new Product("Tablet", 350.50));
-            list.Add(new Product("HD Case", 80.90));
+            //Especificando o data source = fonte de dados
+            int[] numbers = new int[] { 1, 2, 3, 4, 5, };
 
-            Func<Product, string> func = NameUpper;
+            //Definindo o query expression = expressão de consulta
+            IEnumerable<int> result = numbers.Where(x => x % 2 == 0).Select(x => x * 10);
 
-            //List<string> result = list.Select(NameUpper).ToList(); --- TBM PODE SER FEITO DESSE JEITO
-            //List<string> result = list.Select(p => p.Nme.ToUpper()).ToList(); --- OUTRO MÉTODO QUE TBM PODE SER FEITO, que é colocando a expressão dentro do método select
-
-            List<string> result = list.Select(func).ToList();
-            foreach (string p in result)
+            //Executando o query = consulta
+            foreach (int numero in result)
             {
-                Console.WriteLine(p);
+                Console.WriteLine(numero);
             }
-        }
-
-        public static string NameUpper(Product p)
-        {
-            return p.Name.ToUpper();
         }
     }
 }
